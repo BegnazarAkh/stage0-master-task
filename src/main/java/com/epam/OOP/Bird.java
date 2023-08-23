@@ -2,7 +2,7 @@ package com.epam.OOP;
 import com.epam.OOP.Animal;
 public class Bird extends Animal {
     public Bird(){
-        super("brown", 4, true);
+        super("blue", 2, true);
     }
 
     @Override

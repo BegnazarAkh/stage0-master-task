@@ -11,7 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-        String[] seasons = {"Winter", "Spring", "Summer", "Fall"};
+        String[] seasons = {"Winter", "Spring", "Summer", "Autumn"};
         return seasons;
     }
 
@@ -46,7 +46,7 @@ public class ArrayTasks {
      */
     public int totalSum(int[] arr) {
         int sum = 0;
-        for(int i = 0; i < arr.length - 1; i++){
+        for(int i = 0; i < arr.length; i++){
             sum += arr[i];
         }
         return sum;
@@ -96,16 +96,24 @@ public class ArrayTasks {
      * arr = [1,-2, 3]      -> [1, 3] arr = [-1, -2, -3]   -> [] arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-        int[] positive_array = new int[arr.length];
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i] > 0){
-
-                positive_array[i] = arr[i];
+        int count = 0;
+        for (int num : arr) {
+            if (num > 0) {
+                count++;
             }
         }
-        return positive_array;
-    }
 
+        int[] positiveArray = new int[count];
+        int index = 0;
+        for (int num : arr) {
+            if (num > 0) {
+                positiveArray[index] = num;
+                index++;
+            }
+        }
+
+        return positiveArray;
+    }
     /**
      * Return a sorted, ragged, two-dimensional int[][] array following these rules: Incoming one-dimensional arrays
      * must be arranged in ascending order of their length; numbers in all one-dimensional arrays must be in ascending

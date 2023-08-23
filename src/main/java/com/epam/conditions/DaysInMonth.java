@@ -3,12 +3,12 @@ package com.epam.conditions;
 public class DaysInMonth {
     public void printDays(int year, int month) {
         if (year < 0 || month < 1 || month > 12) {
-            System.out.println("Invalid date");
+            System.out.println("invalid date");
             return;
         }
 
         int daysInMonth = getDaysInMonth(year, month);
-        System.out.println("Number of days in month " + month + " of year " + year + ": " + daysInMonth);
+        System.out.println(daysInMonth);
     }
 
     private int getDaysInMonth(int year, int month) {

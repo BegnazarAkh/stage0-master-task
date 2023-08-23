@@ -6,11 +6,11 @@ public class DigitsSumCalculator {
             System.out.println("Please provide a valid four-digit number.");
             return;
         }
-        int sum = 0;
+        int summ = 0;
         while(number > 0){
-            sum += number % 10;
+            summ += number % 10;
             number = number / 10;
         }
-        System.out.println(sum);
+        System.out.println(summ);
     }
 }

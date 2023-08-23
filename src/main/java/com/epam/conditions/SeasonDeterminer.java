@@ -21,7 +21,7 @@ public class SeasonDeterminer {
                     season = "Summer";
                     break;
                 default:
-                    season = "Fall";
+                    season = "autumn";
                     break;
             }
             System.out.println(season);
